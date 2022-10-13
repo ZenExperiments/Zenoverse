@@ -20,11 +20,6 @@
         </div>
       </div>
       <div id="unity-warning"> </div>
-      <div id="unity-footer">
-        <div id="unity-webgl-logo"></div>
-        <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">Basic Example</div>
-      </div>
     </div>
 		<script src="/socket.io/socket.io.js"></script>
 	<script src="client.js"></script>
@@ -90,8 +85,8 @@
         config.devicePixelRatio = 1;
         unityShowBanner('WebGL builds are not supported on mobile devices.');
       } else {
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
+        canvas.style.width;
+        canvas.style.height;
       }
       loadingBar.style.display = "block";
 
@@ -103,9 +98,6 @@
         }).then((unityInstance) => {
           loadingBar.style.display = "none";
 		   window.unityInstance = unityInstance; // <-- this
-          fullscreenButton.onclick = () => {
-            unityInstance.SetFullscreen(1);
-          };
         }).catch((message) => {
           alert(message);
         });
